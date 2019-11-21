@@ -16,6 +16,41 @@ A continuación, un ejemplo sencillo de la estructura del DOM:
 </html>
 ```
 
+### Etiquetas
+
+[etiquetas](https://ibb.co/kBbtNnD)
+
+```html
+<!--
+Etiquetas
+Las etiquetas son la representación básica de la información en un documento html. Sirven para crear y organizar el contenido.
+La sintaxis general de una etiqueta es:-->
+
+<nombre>contenido</nombre>
+<!-- Hay ciertas etiquetas que tienen una sintaxis diferente, ya que se cierran en sí mismas; es decir, no tienen etiqueta de cierre: -->
+
+<nombre />
+Algunas de las etiquetas más conocidas y usadas son:
+
+<!-- Etiquetas de cabecera (head):
+
+doctype: indica al navegador el tipo de documento que se está mostrando.
+html: es la etiqueta que envuelve todo el documento
+head: es la cabecera del documento y contiene sub etiquetas que describen al documento o incluyen recursos adicionales.
+Etiquetas del cuerpo del documento (body):
+
+article: diferencia partes del contenido que pueden vivir por sí mismas.
+nav: para hacer menús de navegación.
+aside: contenido menos relevante, como publicidad, etc.
+section: sirve para diferenciar las secciones principales del contenido.
+header: cabecera del documento.
+footer: pie de página del documento.
+h1 - h6: títulos de nuestro sitio web.
+table: tablas de contenidos, similar a la estructura de las hojas de calculo.
+ul y ol: listas de items.
+div: cualquier división para organizar el contenido. -->
+```
+
 # Multiple ssh key
 
 ```bash
