@@ -51,6 +51,28 @@ ul y ol: listas de items.
 div: cualquier división para organizar el contenido. -->
 ```
 
+### Estructura web
+
+El proyecto que desarrollaremos se trata de un Portafolio Personal, incluirá una cabecera, navegación, un hero (área visual con información destacada) un área de proyectos y otra para eventos, y finalmente un pié de página con un formulario de contacto y enlaces a redes sociales.
+
+El archivo index.html es el archivo que el navegador abre por defecto al acceder a un directorio en un servidor web.
+
+La estructura básica de un archivo html es la siguiente:
+
+```html
+<html>
+  <head>
+    <title> Título de la página title>
+  head>
+  <body>
+    <header> Cabecera del contenido header>
+    <section> Sección principal section>
+    <section> Otra sección section>
+    <footer> Pié de página del documento footer>
+  body>
+html>
+```
+
 # Multiple ssh key
 
 ```bash
@@ -90,4 +112,10 @@ git remote add origin git@hackchan:hackchan/repo_name.git
  User heroblack
  IdentitiesOnly yes
 
+```
+
+# Emmet
+
+```html
+ul>li*3>a{menu $}
 ```
