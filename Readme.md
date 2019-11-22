@@ -73,6 +73,17 @@ La estructura básica de un archivo html es la siguiente:
 html>
 ```
 
+las etiquetas a usar:
+
+h1 a h6: son etiquetas para indicar títulos con un estilo que destaca del resto.
+article: es la parte de nuestro contenido que puede vivir por sí mismo. Pueden haber tantos artícle como proyectos o eventos tenga nuestro portafolio.
+p: define el texto de un párrafo.
+small: aplica una apariencia de texto reducido en tamaño.
+strong: aplica al texto un formato de negritas.
+a: corresponde a un ancla o enlace a una url interna o externa del documento.
+img: con esta etiqueta podemos enlazar imágenes en el documento.
+figure: le da un contexto semántico a las imágenes.
+
 # Multiple ssh key
 
 ```bash
@@ -119,3 +130,27 @@ git remote add origin git@hackchan:hackchan/repo_name.git
 ```html
 ul>li*3>a{menu $}
 ```
+
+# vscode atajos
+
+```bash
+#1. Copiar linea
+#Windows y Mac:
+Shift Alt Down y Shift Alt Up
+#Linux:
+Ctrl Shift Alt Down y Ctrl Shift Alt Up
+
+#2. mover linea
+Alt Down y Alt Up
+
+#3.Comentariar y descomentariar codigo
+Ctrl+K y Ctrl+C o Ctrl+U
+
+#4.Quitar espacios y tabuladores del final
+Ctrl+E, CTRL+º
+Ctrl+E, S
+```
+
+# compresor de imagenes
+
+[tinypng](https://tinypng.com/)
