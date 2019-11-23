@@ -13,9 +13,9 @@
       <a href="#" class="icon-react"></a>
       <nav>
         <ul>
-          <li><a href="">Portafolio</a></li>
-          <li><a href="">Experiencia</a></li>
-          <li><a href="">Trabajemos juntos</a></li>
+          <li><a href="html/portafolio/index.html">Portafolio</a></li>
+          <li><a href="#experince">Experiencia</a></li>
+          <li><a href="#contacto">Trabajemos juntos</a></li>
         </ul>
       </nav>
     </header>
@@ -32,7 +32,7 @@
     </section>
 
     <!-- portafolio -->
-    <section>
+    <section id="portafolio">
       <h2>portafolio (proyectos destacados)</h2>
       <article>
         <h3>Platzi Video</h3>
@@ -51,7 +51,8 @@
       </article>
     </section>
 
-    <section>
+    <!-- experiencia -->
+    <section id="experince">
       <h2>Mas sobre mi experiencia</h2>
       <figure>
         <img src="src/img/js2.png" alt="" width="500" />
@@ -62,21 +63,33 @@
           El evento mas grande sobre gente que comparte toda su experiencia
           programando
         </p>
-        <a>Ver platica</a>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/BIS7cWGgJg0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <a href="https://www.youtube.com/embed/BIS7cWGgJg0" target="_blank"
+          >Ver platica</a
+        >
       </h3>
     </section>
 
     <section>
       seccion contactos
     </section>
-
-    <footer>
+    <!-- contacto -->
+    <section id="contacto">
       <form action="">
         <h3>¿Creamos algo juntos?</h3>
         <label for="mail"> Dejame tu email</label>
         <input id="mail" type="email" placeholder="Dejame tu email" />
         <button>Enviar</button>
       </form>
-    </footer>
+    </section>
+    <!-- footer -->
+    <footer></footer>
   </body>
 </html>
