@@ -177,3 +177,18 @@
 .icon-file-excel:before {
   content: "\eae2";
 }
+.link {
+  text-decoration: none;
+  color: deepskyblue;
+}
+
+body {
+  font-size: 16px;
+  background: white;
+  font-family: arial;
+  margin: 0;
+}
+
+header {
+  background: #443;
+}

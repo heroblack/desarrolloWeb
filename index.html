@@ -7,20 +7,33 @@
     <title>Fabio Rojas</title>
     <link rel="icon" type="image/png" href="src/img/favicon.ico" />
     <link rel="stylesheet" href="src/css/portafolio.css" />
+    <style>
+      .link {
+        color: deepskyblue;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <a href="#" class="icon-react"></a>
-      <nav>
-        <ul>
-          <li><a href="html/portafolio/index.html">Portafolio</a></li>
-          <li><a href="#experince">Experiencia</a></li>
-          <li><a href="#contacto">Trabajemos juntos</a></li>
+    <header class="header">
+      <figure class="header__logo">
+        <a href="#" class="icon-react"></a>
+      </figure>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="link" href="html/portafolio/index.html">Portafolio</a>
+          </li>
+          <li class="header__item">
+            <a class="link" href="#experince">Experiencia</a>
+          </li>
+          <li class="header__item">
+            <a class="link" href="#contacto">Trabajemos juntos</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <section>
+    <section class="hero">
       <h1>
         Hola! Soy <strong>Fabio Rojas</strong> Desarrollador <br />
         <strong>Backend</strong> and <strong>Frontend</strong> Full Stack <br />
@@ -32,57 +45,64 @@
     </section>
 
     <!-- portafolio -->
-    <section id="portafolio">
+    <section id="portafolio" class="portfolio">
       <h2>portafolio (proyectos destacados)</h2>
-      <article>
-        <h3>Platzi Video</h3>
-        <h6>React Native / React</h6>
-        <p>
+      <article class="project">
+        <h3 class="project__title">Platzi Video</h3>
+        <h6 clas="project__course">React Native / React</h6>
+        <p class="project__date">
           <small><strong>Fecha:</strong>01/07/2019</small>
         </p>
-        <p>
+        <p class="project__url">
           <small><strong>Puedes verlo en </strong>www.fabiorojas7.com</small>
         </p>
-        <p>
+        <p class="project__description">
           Platzi video fue el resultado de 3 meses de trabajo para crear la
           mejor app para enseñar el funcionamiento de React y React Native.
         </p>
-        <img src="src/img/js3.png" width="500" alt="" />
+        <figure class="project__container">
+          <img
+            class="project__image"
+            src="src/img/js3.png"
+            width="500"
+            alt=""
+          />
+        </figure>
       </article>
     </section>
 
-    <!-- experiencia -->
+    <!-- eventos -->
     <section id="experince">
       <h2>Mas sobre mi experiencia</h2>
-      <figure>
-        <img src="src/img/js2.png" alt="" width="500" />
-      </figure>
-      <h3>
-        PlatziConf Mexico 2018
-        <p>
+      <article class="event">
+        <figure class="event__imageContainer">
+          <img class="event__image" src="src/img/js2.png" alt="" width="500" />
+        </figure>
+        <h3 class="event__title">PlatziConf Mexico 2018</h3>
+        <p class="event__description">
           El evento mas grande sobre gente que comparte toda su experiencia
           programando
         </p>
-        <iframe
+        <!-- <iframe
           width="560"
           height="315"
           src="https://www.youtube.com/embed/BIS7cWGgJg0"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
-        <a href="https://www.youtube.com/embed/BIS7cWGgJg0" target="_blank"
+        ></iframe> -->
+        <a
+          class="event__url"
+          href="https://www.youtube.com/embed/BIS7cWGgJg0"
+          target="_blank"
           >Ver platica</a
         >
-      </h3>
+      </article>
     </section>
 
-    <section>
-      seccion contactos
-    </section>
     <!-- contacto -->
-    <section id="contacto">
-      <form action="">
+    <section id="contacto" class="contact">
+      <form action="" class="contact__email">
         <h3>¿Creamos algo juntos?</h3>
         <label for="mail"> Dejame tu email</label>
         <input id="mail" type="email" placeholder="Dejame tu email" />
@@ -90,6 +110,6 @@
       </form>
     </section>
     <!-- footer -->
-    <footer></footer>
+    <footer class="footer"></footer>
   </body>
 </html>
