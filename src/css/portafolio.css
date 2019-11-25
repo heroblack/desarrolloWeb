@@ -177,18 +177,74 @@
 .icon-file-excel:before {
   content: "\eae2";
 }
+
+body {
+  font-size: 16px;
+  background: white;
+
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-decoration: ;
+}
+
+h1 strong {
+  color: #026fff;
+}
+
+.project-details {
+  width: 500px;
+  background: red;
+}
+
+.project__container {
+  width: 400px;
+  background: red;
+}
+
 .link {
   text-decoration: none;
   color: deepskyblue;
 }
 
-body {
-  font-size: 16px;
-  background: white;
-  font-family: arial;
-  margin: 0;
+header {
+  background: #1d252c;
 }
 
-header {
-  background: #443;
+.hero {
+  height: 300px;
+  background-color: #1d252c;
+  background-image: url("../img/js2.png");
+  /* background-size: width height */
+  background-size: 600px 400px;
+  /* background-size: cover; */
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-position:x y */
+  background-position: right 0;
+  /* background-position-x: 600px; */
+}
+.hero__logo {
+  display: none;
+}
+
+.header__logo {
+  display: block;
 }

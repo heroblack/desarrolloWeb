@@ -104,6 +104,40 @@ Estilos con el tag Style: regularmente este tag se incluye dentro de la etiqueta
 Estilos enlazados desde un archivo css externo: utilizando la etiqueta link que nos permite enlazar recursos externos.
 A CSS, se le llama hojas de estilos en cascada porque los estilos que se definen para una página, se van aplicando de arriba hacia abajo, y de lo más general a lo más particular, teniendo prioridad lo más particular. Esto es, los estilos que prevalecen son los que han sido definidos en línea, luego los que fueron definidos mediante la etiqueta style en la cabeza o cuerpo del html, y por último los estilos definidos en archivos externos enlazados con la etiqueta link. Esta prioridad se puede alterar al usar el modificador \*\*!important"" en la definición de algún estilo en particular, aunque esto no es recomendado.
 
+# Unidades de Medida y Colores
+
+Hay varias unidades de medida con las que se puede trabajar en CSS: %, em, rem, px, pt, fr, vw, vh
+Las medidas más comunes y utilizadas son los pixeles. Un pixel es la menor unidad homogénea en color que forma parte de una imagen digital. Es la unidad más práctica y fácil de utilizar y manipular, y es la que utilizaremos mayormente en este curso.
+
+Los colores en CSS pueden ser representados de al menos tres formas diferentes:
+
+Representados con palabras claves para cada color, como: red, green, blue, pink, yellow, black, etc.
+Usando la composición de tres colores (rojo, verde y azul): para esto podemos usar notación exadecimal o las funciones rgb() y rgba().
+Usando la composición mediante valores de Matiz, Saturación y Luminosidad con: hls() y hsla().
+h=>hue (0 a 360)
+S=>saturation (0 a 100) 100 => full color < 100 tiende a ser gris
+l=>light (0 a 100) 100=> blanco 50=>full color 0 => negro
+a=>alpha
+Con respecto a los valores hexadecimales, cada color está representado por 6 digitos, que representan 3 pares de hexadecimales: FF - FF - FF (rojo, verde y azul), en el que cada par puede tomar valores hexadecimales entre 00 y FF. Cada uno equivale a valores decimales entre 0 y 255, donde 0 es la ausencia de ese color y 255 la mayor cantidad disponible. De esta manera cada color se forma por la combinación de diferentes proporciones de rojo, verde y azul.
+
+#000000 es equivalente a Negro
+#FF0000 es equivalente a Rojo
+#00FF00 es equivalente a Verde
+#0000FF es equivalente a Azul
+#FFFFFF es equivalente a Blanco
+
+### Background
+
+Backgrounds de color e imagen
+Algunas de las propiedades de css relacionadas con la apariencia del fondo de los elementos son:
+
+background: con la que se puede indicar un color, o usada de manera extendida, puede incluir color de fondo, url de la imagen, posición y modo de repetición de la imagen.
+background-image: contiene la url que se usará como fondo del elemento.
+background-color: indica el color de fondo, se puede usar en combinación con la imagen.
+background-size: se puede indicar en valores de alto y ancho o en alguna de las palabras claves permitidas: cover o contain.
+background-position: indica la posición de la imagen dentro del elemento, puede indicarse en unidades o en palabras claves como center, left, top y right.
+background-repeat: indica el método de repetición de la imagen de fondo, puede ser: repeat, repeat-x, repeat-y o no-repeat.
+
 # Multiple ssh key
 
 ```bash
