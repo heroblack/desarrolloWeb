@@ -138,6 +138,58 @@ background-size: se puede indicar en valores de alto y ancho o en alguna de las 
 background-position: indica la posición de la imagen dentro del elemento, puede indicarse en unidades o en palabras claves como center, left, top y right.
 background-repeat: indica el método de repetición de la imagen de fondo, puede ser: repeat, repeat-x, repeat-y o no-repeat.
 
+### bordes
+
+Todos los elementos html admiten la propiedad de css border, que define la apariencia que tendrá el contorno del componente.
+El borde puede ser de muchos estilos, y al igual que las propiedades margin y padding que aprenderás más adelante, a los bordes se les puede colocar estilos tanto de forma general con la propiedad border, como de acuerdo al lado del elemento que se indique: border-top, border-right, border-bottom y border-left.
+
+Con la propiedad boder-radius se define el redondeado de las esquinas de los ;[bordes](https://border-image.com/).
+
+```css
+/* border-color: gray;
+border-width: 1px;
+border-style: dotted;
+border: <width> <style> <color>  */
+div {
+  border: 5px solid red;
+  border-top-width: 15px;
+  border-top-color: orange;
+  border-top-style: solid; /* Esta propiedad no es necesaria (se hereda) */
+}
+
+div {
+  border-radius: 25px; /* Primer formato */
+  border-radius: 25% 50%; /* Segundo formato */
+  border-radius: 50px 25px 10px; /* Tercer formato */
+  border-radius: 25px 0 15px 50px; /* Cuarto formato */
+}
+
+div {
+  border-radius: 5px 50px / 50px 15px; /* Usando el segundo formato */
+}
+
+/* border-top-left-radius:	TAMAÑO	Indica un radio para redondear la esquina superior izquierda.
+border-top-right-radius:	  TAMAÑO	Indica un radio para redondear la esquina superior derecha.
+border-bottom-left-radius:	TAMAÑO	Indica un radio para redondear la esquina inferior izquierda.
+border-bottom-right-radius:	TAMAÑO	Indica un radio para redondear la esquina inferior derecha. */
+
+.borde {
+  border-image-width: 24px;
+  border-image-source: url(https://i.imgur.com/lC5gBC8.png);
+  border-image-slice: 54 85;
+  border-image-outset: 6px;
+  border-image-repeat: repeat repeat;
+}
+
+div {
+  border-image: <source> <slice> <width> <outset> <repeat>;
+}
+
+div {
+  border-image: url(borde.png) 54 85 repeat;
+}
+```
+
 # Multiple ssh key
 
 ```bash
