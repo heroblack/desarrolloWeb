@@ -220,8 +220,6 @@ h1 strong {
 
 .project-details {
   width: 500px;
-  background: red;
-  margin: 0 auto;
 }
 
 .project__container {
@@ -250,6 +248,7 @@ header {
   /* background-position:x y */
   background-position: right 0;
   /* background-position-x: 600px; */
+  margin-bottom: 5px;
 }
 .hero__logo {
   display: none;
@@ -260,7 +259,16 @@ header {
 }
 
 .portfolio {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  background: red;
   border: 1px solid gray;
   border-radius: 10px;
-  margin-bottom: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 10px auto;
 }
