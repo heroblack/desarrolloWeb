@@ -190,6 +190,8 @@ div {
 }
 ```
 
+<<<<<<< HEAD
+
 ### Margenes
 
 Los márgenes en CSS son el espacio que separa a los elementos html entre sí. Hay elementos de html que traen márgenes predefinidos (poe defecto) en los estilos propios del navegador como el caso de: body, h1, h2, h3, h4, h5, h6, ol, ul, li, p, y muchos otros.
@@ -279,6 +281,7 @@ html {
 # Multiple ssh key
 
 ```bash
+=======
 ssh-copy-id -i ~/.ssh/heroblack hackchan@192.168.18.22
 ssh-keygen -f ~/.ssh/heroblack -t rsa -b 4096 -C “inge.fabio.rojas@gmail.com”
 
@@ -301,6 +304,8 @@ git remote set-url origin git@hackchan:hackchan/repo_name.git
 #remoto
 git remote add origin git@hackchan:hackchan/repo_name.git
 ```
+
+<<<<<<< HEAD
 
 ```
  Host hackchan
@@ -345,4 +350,13 @@ Ctrl+E, S
 
 # compresor de imagenes
 
-[tinypng](https://tinypng.com/)
+# [tinypng](https://tinypng.com/)
+
+```txt
+ Host hackchan
+ HostName github.com
+ IdentitiesOnly yes
+ IdentityFile ~/.ssh/hackchan
+```
+
+> > > > > > > b2096db9ed4d6d132edf81824bd91c557746ef31
