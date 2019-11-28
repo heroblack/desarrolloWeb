@@ -209,6 +209,73 @@ En el modelo de caja, el ancho total de un elemento html equivale a la sumatoria
 
 Con la propiedad box-sizing, y en particular con el valor border-box de esta propiedad, podemos modificar el comportamiento del modelo de caja para que nuestro elemento nunca supere el tamaño máximo que le hayamos definido en width y height. Esta es la opción recomendada para trabajar.
 
+### Tipos de display
+
+Display es la propiedad de css que indica cómo debe ser mostrado un elemento html. Todos los elementos tienen algún tipo de display. Si un elemento no se ve en pantalla es porque seguramente su display es none.
+
+Los valores más comunes que puede recibir la propiedad display son:
+
+block: el elemento intenta abarcar todo el ancho posible.
+inline: reduce su tamaño exclusivamente hasta lo que abarca su contenido, descartando las propiedades width y height.
+inline-block: combina lo mejor de block e inline, ya que respeta las dimensiones indicadas en las propiedades width y height, pero coloca el elemento en línea (al costado) de elementos hermanos que también tengan display: inline o inline-block.
+flex: asume algunas propiedades por defecto que favorecen la alineación de los elementos internos.
+grid: similar a flex, asume algunas propiedades por defecto organizando los contenidos en filas y columnas.
+none: oculta el elemento.
+
+### Flex
+
+Flexbox se refiere al tipo de display en css que permite un manejo flexible de la alineación, dimensionamiento y distribución de elementos html.
+
+Esta propiedad se aplica a un elemento padre, pero va a afectar principalmente a sus elementos hijos directos. Por defecto, los elementos internos quedan alineados unos seguidos de los otros. El comportamiento del modelo de caja de estos elementos hijos también se ha modificado, ya que pierden el efecto de su propiedad margin.
+
+Los elementos hijos de un padre con propiedad display: flex tienen a su disposición algunas nuevas propiedades que aportan mayor flexibilidad a su comportamiento. Una de estas propiedades es flex-shrink que, junto a la propiedad flex-wrap del padre, permite adaptar y distribuir los elementos de manera dinámica en el espacio horizontal disponible hasta ocupar todo el espacio, y luego pasar a ocupar dinamicamente las siguiente filas hacia abajo.
+
+Flexbox se refiere al tipo de display en css que permite un manejo flexible de la alineación, dimensionamiento y distribución de elementos html.
+
+Esta propiedad se aplica a un elemento padre, pero va a afectar principalmente a sus elementos hijos directos. Por defecto, los elementos internos quedan alineados unos seguidos de los otros. El comportamiento del modelo de caja de estos elementos hijos también se ha modificado, ya que pierden el efecto de su propiedad margin.
+
+Los elementos hijos de un padre con propiedad display: flex tienen a su disposición algunas nuevas propiedades que aportan mayor flexibilidad a su comportamiento. Una de estas propiedades es flex-shrink que, junto a la propiedad flex-wrap del padre, permite adaptar y distribuir los elementos de manera dinámica en el espacio horizontal disponible hasta ocupar todo el espacio, y luego pasar a ocupar dinamicamente las siguiente filas hacia abajo.
+
+## propiedades padre
+
+```css
+ {
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  align-content: flex-start;
+  formalargaflex-direction: column;
+  flex-wrap: wrap;
+  formacortaflex-flow: column wrap;
+
+  flex-flow: column-reverse wrap-reverse;
+  align-items: flex-end;
+  justify-content: center;
+  align-content: space-between;
+}
+/* propiedades hijo */
+ {
+  align-self: center;
+  order: 2;
+  flex-shrink: 0;
+}
+```
+
+### reseteo de estilos
+
+```css
+html {
+  box-sizing: border-box;
+}
+,
+::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+```
+
 # Multiple ssh key
 
 ```bash
