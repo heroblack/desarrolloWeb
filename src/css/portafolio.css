@@ -195,7 +195,7 @@ font-family: 'Raleway', sans-serif;
 
 body {
   font-size: 16px;
-  background: white;
+  background: #213;
   font-family: "Open Sans", sans-serif;
   /* font-family: "Source Sans Pro", sans-serif; */
   margin: 0;
@@ -209,7 +209,6 @@ h5,
 h6 {
   font-family: "Fjalla One", sans-serif;
   font-weight: normal;
-  margin: 0;
 }
 
 h1 {
@@ -369,18 +368,18 @@ figure {
 .hero {
   height: 300px;
   background: #213;
-  background-image: url("../img/js5.jpg");
-  filter: blur(5px);
+  /* background-image: url("../img/js5.jpg"); */
+  /* filter: blur(5px); */
   /* background-size: width height */
-  background-size: 600px 400px;
+  /* background-size: 600px 400px; */
 
   /* background-position: left; */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   /* background-position:x y */
-  background-position: right 0;
+  /* background-position: right 0; */
   /* background-position-x: 600px; */
-  margin-bottom: 5px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .hero__logo {
@@ -395,10 +394,12 @@ footer {
   font-family: "Roboto", sans-serif;
   display: flex;
   color: white;
+  padding: 10px 0;
   background: rgba(0, 0, 0, 0.8);
+  /* background: #056fff; */
   justify-content: space-between;
 
-  padding: 4px 10px;
+  /* padding: 4px 10px; */
 }
 
 footer p {
@@ -408,7 +409,6 @@ footer p {
 /* estilos para el portafolio */
 .portfolio {
   background: #213;
-  padding: 20px;
 }
 
 h2 {
@@ -417,7 +417,7 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .project {
@@ -488,7 +488,7 @@ h2 {
 }
 
 .event-details {
-  margin: 20px 40px;
+  margin: 10px 40px;
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
   top: 140px;
@@ -504,4 +504,84 @@ h2 {
 .event-url {
   display: inline-block;
   margin-bottom: 5px;
+}
+
+/* estilos contacto */
+.contact {
+  background: #056fff;
+  color: white;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.social {
+  display: flex;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background-size: 50px 50px;
+  margin: 0 10px;
+}
+
+.social-link.twitter {
+  background-image: url("../img/twitter.svg");
+}
+
+.social-link.facebook {
+  background-image: url("../img/facebook.svg");
+}
+
+.social-link.github {
+  background-image: url("../img/github.svg");
+}
+
+.social-link.instagram {
+  background-image: url("../img/instagram.svg");
+}
+
+.form-email input {
+  width: 200px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: gray;
+  padding: 10px 20px 10px 30px;
+  background-image: url("../img/envelope.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button {
+  font-size: 16px;
+  display: block;
+  margin-top: 10px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  color: white;
+  /* padding: 5px 30px; */
+  padding: 10px 0;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.form-email h3 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  /* border: 1px solid red; */
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
 }
