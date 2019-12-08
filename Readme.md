@@ -278,6 +278,112 @@ html {
 }
 ```
 
+### Response designed
+
+CONCEPTOS A TENER EN CUENTA
+Viewport: área visible del navegador
+Portrait: vertical
+Landscape: horizontal
+**Mobile first: **comenzar web con enfoque para dispositivos moviles
+**Desktop first: **comenzar web con enfoque para computadoras
+¿Cúal es mejor? Técnicamente Mobile First por la cantidad de codigo que va a ir leyendo segun el dispositivo en el que se ejecute
+[ver diseños]('https://mediaqueri.es/')
+
+```html
+patrones: * Mostly fluid * Colocacion de columnas * Layout shifter * Tiny
+Twearks * Off Canvas Diseño Vertical (Portrait) Diseño Horizontal (Landscape)
+Mobile First: Empezar un website desde la menor resolucion soportada Desktop
+first: Empezar un website desde la mayor resolucion soportada em : Unidad
+relativa al tamaño de fuente especificada mas cercano
+<nav>
+  font-size: 16px
+  <ul>
+    font-size: 2em; =>32px
+    <li>
+      font-size: 1em =>32px <a> font-size:.5em =>16px padding:2em =>32px</a>
+    </li>
+  </ul>
+</nav>
+
+rem: unidad relativa al tamaño de fuente especificada en el ascentro mas lejana
+(html o body) vw / vh : unidad relativa porcentual con respecto al viewport
+```
+
+### Media Queries
+
+min-width = desde
+max-width = hasta
+
+```css
+@media media type and (condicion);
+
+@media media screen and (max-width: 768px) and (min-width: 480px) {
+}
+```
+
+```text
+Mobile first
+
+@ media screen and (min-width:320 px){}
+@ media screen and (min-width:480 px){}
+@ media screen and (min-width:768 px){}
+@ media screen and (min-width:1024 px){}
+min-width: desde
+medidas iniciales en la que van las pantallas
+
+Desktop first
+
+@ media screen and (max-width:1024 px){}
+@ media screen and (min-width:768 px){}
+@ media screen and (min-width:480 px){}
+@ media screen and (min-width320: px){}
+max-width: hasta
+medidas maximas que las pantallas pueden alcanzar, por como dice su nombre suelen ser medidas ´para ordenadores, o pantallas grandes
+```
+
+### Video Iframe responsive
+
+calculos de proporcion para videos 16: (Horizontal)
+h\*100 / w
+
+videos verticales:
+W\*100 / h
+
+calc(315*100/560)*1%
+
+```html
+<div class="flexible-video">
+  <iframe
+    class="youtube-video"
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/LoKvxCSZw5w"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+  ></iframe>
+</div>
+```
+
+```css
+.flexible-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* h*100/w  */
+  background: blue;
+}
+.youtube-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+```
+
 # Multiple ssh key
 
 ```bash
@@ -304,8 +410,6 @@ git remote set-url origin git@hackchan:hackchan/repo_name.git
 #remoto
 git remote add origin git@hackchan:hackchan/repo_name.git
 ```
-
-<<<<<<< HEAD
 
 ```
  Host hackchan
@@ -358,5 +462,3 @@ Ctrl+E, S
  IdentitiesOnly yes
  IdentityFile ~/.ssh/hackchan
 ```
-
-> > > > > > > b2096db9ed4d6d132edf81824bd91c557746ef31

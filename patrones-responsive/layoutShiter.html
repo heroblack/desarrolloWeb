@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+      }
+
+      .container div {
+        box-sizing: border-box;
+        min-height: 150px;
+        min-width: 150px;
+      }
+
+      .c1,
+      .c2,
+      .c3,
+      .c4 {
+        width: 100%;
+      }
+
+      .c1 {
+        background: #913;
+      }
+      .c2 {
+        background: #981;
+      }
+
+      .c3 {
+        background: #099;
+      }
+
+      .c4 {
+        background: #392;
+      }
+
+      @media (min-width: 600px) {
+        .c1 {
+          width: 25%;
+        }
+
+        .c4 {
+          width: 75%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        .container {
+          width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a>logo</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="./MostlyFluid.html">Mostly Fluid</a>
+          </li>
+          <li>
+            <a href="./ColocacionColumnas.html">Colocacion Columnas</a>
+          </li>
+          <li>
+            <a href="./layoutShiter.html">Layout Shiter</a>
+          </li>
+          <li>
+            <a href="./TinyTweaks.html">Tiny Tweaks</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container" role="main">
+      <div class="c1">1</div>
+      <div class="c4">
+        <div class="c2">2</div>
+        <div class="c3">3</div>
+      </div>
+    </div>
+  </body>
+</html>
