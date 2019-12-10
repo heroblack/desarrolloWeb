@@ -13,6 +13,8 @@ function validation(event) {
   }
 }
 
+validation(ipad);
+
 function clickBtnBurger() {
   hideshow();
   moveBtn();
