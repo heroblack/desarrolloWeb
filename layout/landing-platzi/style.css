@@ -1,0 +1,131 @@
+:root {
+  --bg-color: #23475b;
+  --tx-color: white;
+  --br-color: #dbdbe2;
+  --time-color: #3a3b3f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+.hero {
+  background: var(--bg-color);
+  color: var(--tx-color);
+  padding: 32px 15px;
+  display: grid;
+  grid-template-columns: minmax(auto, 1024px);
+  justify-content: center;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 75px 1fr 320px;
+  grid-template-areas:
+    "badge title form"
+    ". description form"
+    ". countdown form";
+}
+
+.badge {
+  grid-area: badge;
+}
+
+.badge img {
+  max-width: 70px;
+}
+
+.titulo {
+  grid-area: title;
+  font-size: 36px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  grid-area: form;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5em;
+  border-radius: 10px;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--br-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form p {
+  font-size: 20px;
+  color: var(--time-color);
+  margin-bottom: 1em;
+}
+
+.form button {
+  background: #98ca3f;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 5px solid #6d932b;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.form button:active {
+  transform: scale(0.8);
+}
+
+.countdown {
+  grid-area: countdown;
+  padding: 10px;
+}
+.countdown p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.countdown span {
+  font-size: 33px;
+}
+
+.countdown span:after {
+  content: ":";
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.countdown span:last-child:after {
+  display: none;
+}
+
+.description {
+  grid-area: description;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 75px 1fr;
+    grid-template-areas:
+      "badge title"
+      "description description"
+      "form form"
+      "countdown countdown";
+  }
+  .description {
+    padding: 20px 0;
+  }
+}

@@ -24,8 +24,8 @@ b-cov
 *.gz
 
 # Images
-*jpg
-*png
+#*jpg
+#*png
 
 #videos
 *mp4

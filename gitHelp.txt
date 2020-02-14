@@ -1,0 +1,334 @@
+Alias git
+********************************
+#Alias en git
+git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+#Alias en linux
+alias arbolito=�git log --all --graph --decorate --oneline�
+
+tags y versiones en git y github
+********************************
+git tag
+git show-ref --tags
+git tag -a v1.0.0 -m "version beta del dise�o" b96a775
+git push origin --tags
+#boorar tags
+
+git tag -d dormido
+git push origin :refs/tags/dormido.
+
+Manejo de ramas en github
+**********************************
+git show-branch
+git show-branch --all
+git push origin header footer
+gitk
+git push origin cabecera
+
+pull request
+**********************************
+Es una funcionalidad de github (en gitlab llamada merge request y en bitbucket push request), en la que un colaborador pide que revisen sus cambios antes de hacer merge a una rama, normalmente master.
+
+Al hacer un pull request se genera una conversaci�n que pueden seguir los dem�s usuarios del repositorio, as� como autorizar y rechazar los cambios.
+
+El flujo del pull request es el siguiente
+
+Se trabaja en una rama paralela los cambios que se desean (git checkout -b <rama>)
+Se hace un commit a la rama (git commit -am '<Comentario>')
+Se suben al remoto los cambios (git push origin <rama>)
+En GitHub se hace el pull request comparando la rama master con la rama del fix.
+Uno, o varios colaboradores revisan que el c�digo sea correcto y dan feedback (en el chat del pull request)
+El colaborador hace los cambios que desea en la rama y lo vuelve a subir al remoto (autom�ticamente jala la historia de los cambios que se hagan en la rama, en remoto)
+Se aceptan los cambios en GitHub
+Se hace merge a master desde GitHub
+Importante: Cuando se modifica una rama, tambi�n se modifica el pull request.
+
+*******************
+****Iniciar Git****
+*******************
+
+git int
+
+*******************
+****Iniciar Git****
+*******************
+
+**********************************
+*******Configuraci�n de Git*******
+**********************************
+
+git config
+git config --list
+git config --list --show origin
+git config --list --show-origin
+git config --global
+git config --global user.name "SC"
+git config --global user.email "jesuscastellanospaez@hotmail.com"
+
+**********************************
+*******Configuraci�n de Git*******
+**********************************
+
+********************************************
+******Agragar a la zona de preparaci�n******
+********************************************
+
+git add Archivo.txt
+
+git add .
+
+********************************************
+******Agragar a la zona de preparaci�n******
+********************************************
+
+****************************
+*********Ver estado*********
+****************************
+
+git status
+
+****************************
+*********Ver estado*********
+****************************
+
+***************************************************************************
+*****************Quitar de la zona de preparaci�n**************************
+***************************************************************************
+
+git rm --cached archivo.txt (Quitar de la zona de preparaci�n).
+
+***************************************************************************
+*****************Quitar de la zona de preparaci�n**************************
+***************************************************************************
+
+************************************************************
+**********************Realizar commint**********************
+************************************************************
+
+git commit -m "Este es el pimer commit de este archivo"
+git commit -am "Este es el pimer commit de este archivo"
+
+************************************************************
+**********************Realizar commint**********************
+************************************************************
+
+*****************************************************
+*******Ver el historial de cambios del archivo*******
+*****************************************************
+
+git log
+git log Archivo.txt
+
+*****************************************************
+*******Ver el historial de cambios del archivo*******
+*****************************************************
+
+***************************************************************
+************Muestra todos los cambios sobre un archivo*********
+***************************************************************
+
+git show Archivo.txt
+
+***************************************************************
+************Muestra todos los cambios sobre un archivo*********
+***************************************************************
+
+**************************************
+**********Comparar versiones**********
+**************************************
+
+git diff commint commint
+
+**************************************
+**********Comparar versiones**********
+**************************************
+
+*****************************************************************************
+************************Volver a una versi�n anterior************************
+*****************************************************************************
+
+git reset commit --hard (borramos todos los cambios y lo que tengamos en staging) 
+
+git reset commit --soft (soft conservamos cambios y lo que tengamos en staging) 
+
+git checkout (commit) Archivo.txt
+
+git checkout (rama) Archivo.txt
+*****************************************************************************
+************************Volver a una versi�n anterior************************
+*****************************************************************************
+
+****************************************************************************
+**************************Ver Cambio en bytes*******************************
+****************************************************************************
+
+git log --stat(Cambio en bytes)
+
+****************************************************************************
+**************************Ver Cambio en bytes*******************************
+****************************************************************************
+
+***************************************************************************
+****************************Crear una rama*********************************
+***************************************************************************
+
+git branch (branchName)
+
+***************************************************************************
+****************************Crear una rama*********************************
+***************************************************************************
+
+
+***************************************************************************
+**************************Cambiar de rama**********************************
+***************************************************************************
+
+git checkout (branchName)
+
+***************************************************************************
+**************************Cambiar de rama**********************************
+***************************************************************************
+
+*******************************************************************
+************************Merge entre branchs************************
+*******************************************************************
+
+git merge (branchName)
+
+**Estar en la rama master o en la que se quiere dejar el <Head>**
+*******************************************************************
+************************Merge entre branchs************************
+*******************************************************************
+
+****************************************************
+************Traer un repositorio externo************
+****************************************************
+
+git remote add origin (url)
+git remote (muestra el origen)
+git remote -v(es verval)
+
+git pull origin master --allow-unrelated-histories (Fuerza la union de las diferentes historias)
+
+git pull origin master (Descarga cambios)
+
+git push (origin) (master) (Sube Cambios)
+****************************************************
+************Traer un repositorio externo************
+****************************************************
+
+*************************************
+**************Seguridad**************
+*************************************
+
+ssh-keygen -t rsa -b 4096 -C "jesuscastellanospaez@gmail.com" (crea la llave publica y privada)
+eval $(ssh-agent -s) (saber si el agente ssh esta ejecuntando)
+ssh-add ~/.ssh/id_rsa (agregar la llave privada)
+
+git remote set-url origin git@github.com:gsuscastellanosSC/hyperblog.git (cambiar url para que sea con ssh)
+
+
+*************************************
+**************Seguridad**************
+*************************************
+
+**********************************
+***************TAGS***************
+**********************************
+
+git log --all(Muesta toda la historia)
+git log --all --graph (Muestra toda la historia con la ineracci�n de las ramas)
+git log --all --graph --decorate --oneline
+alias arbolito="git log --all --graph --decorate --oneline"(forma de alias en linux)
+
+git tag -a v0.1 -m "apendiendo tags en git" (hash del commit) (crear un tag)
+git show-ref --tags
+
+git push origin --tags (enviar los tags al repositorio remoto)
+git tag -d v0.1   && $ git push origin :refs/tags/v0.1 (Borrar tags)
+
+
+**********************************
+***************TAGS***************
+**********************************
+
+************************
+********ramas***********
+************************
+
+git show-branch --all (�Cuales branch existen y sus historias)
+gitk (igual que la anterior per con gui)
+git push origin :[nombre_branch] (Elimina rama remota)
+
+
+************************
+********ramas***********
+************************
+
+************************
+***Crear fuente nueva***
+************************
+
+git remote add upstream (url-github)
+git pull upstream master (trae todos los cabios de master del origen upstream)
+git push origin master
+
+************************
+***Crear fuente nueva***
+************************
+
+git stash
+git stash pop
+git stash list
+git stash branch english-version
+git stash drop
+
+
+git clean
+git clean --dry-run # muestra solo lo que va a Borrar
+git clean -f
+
+#Mala practica
+llevar un commit especifico a master
+git cherry-pick hashid
+
+#Mala practica
+git reset y reflow
+
+
+#buscar
+git grep color
+git grep -n color  #que linea me aparece la palabra color
+git grep -c color  #cuantas veces escribi color
+git log -S
+
+
+#colaborativo
+git shortlog -sn = muestra cuantos commit han hecho cada miembros del equipo.
+git shortlog -sn --all = muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado
+git shortlog -sn --all --no-merge = muestra cuantos commit han hecho cada miembros quitando los eliminados sin los merges
+git blame ARCHIVO = muestra quien hizo cada cosa linea por linea
+git COMANDO --help = muestra como funciona el comando.
+git blame ARCHIVO -Llinea_inicial,linea_final= muestra quien hizo cada cosa linea por linea indicándole desde que linea ver ejemplo -L35,50
+**git branch -r **= se muestran todas las ramas remotas
+git branch -a = se muestran todas las ramas tanto locales como remotas
+
+git shotlog: Muestra la descripción de los commits y la cantidad por cada persona
+
+git shortlog --sn: Muestra la cantidad de commits por cada persona
+
+git shortlog --sn --all --no-merges: Muestra la cantidad de commit sin incluir los merge
+
+git config --global alias.stasts "git shortlog --sn --all --no-merges": Agregamos un alias de manera global en git
+
+git blame file.ext Vemos líneas por línea quien ha hecho los cambios
+
+git blame -C file.ext Muestra de una ejor forma las modificaciones realizadas línea por línea
+
+git command --help Muestra la documentación para ese comando.
+
+git blame file.ext -L35,60 Muestra los cambios realizados desde la línea 35 hasta 60
+
+git branch -r Muestra el listado de ramas remotas (Las que están el el servidor)
+
+git branch -a Muestra todas las ramas, las del repositorio local y las del reposotorio remoto

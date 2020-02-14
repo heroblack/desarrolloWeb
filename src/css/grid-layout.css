@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 16px;
+  background: #f1f1f1;
+}
+
+.layout {
+  display: grid;
+  justify-items: strech;
+  align-items: center;
+  grid-template: 100px 1fr 150px / 200px 1fr;
+  grid-template-areas:
+    "header header"
+    "left contenido"
+    "footer footer";
+  height: 100vh;
+}
+
+.item {
+  background: orange;
+  border: 1px solid #c1c1c1;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.left {
+  grid-area: left;
+}
+
+.contenido {
+  grid-area: contenido;
+}
+
+.footer {
+  grid-area: footer;
+}

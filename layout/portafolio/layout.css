@@ -1,0 +1,110 @@
+//@charset "UTF-8"
+
+/* .layout {
+  width: 90%;
+  max-width: 1000px;
+  background: #111999;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, auto);
+  grid-template-areas:
+    "header header"
+    "hero hero"
+    "portafolio portafolio"
+    "evento evento"
+    "contacto contacto"
+    "coder coder";
+}
+
+.layout > div,
+.layout > header,
+.layout > footer {
+  background: #fff;
+  padding: 4px;
+
+}
+
+.layout .header {
+  grid-area: header;
+}
+
+.layout .hero {
+  grid-area: hero;
+}
+
+.layout .portafolio {
+  grid-area: portafolio;
+}
+
+.layout .evento {
+  grid-area: evento;
+}
+
+.layout .contacto {
+  grid-area: contacto;
+}
+
+.layout .coder {
+  grid-area: coder;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+}
+
+.item {
+  background: #58d5f6;
+  color: white;
+  padding: 10px;
+}
+
+.item:nth-child(even) {
+  background: #236fc8;
+}
+
+.item5 {
+  background: #1f0000;
+  grid-column: 1 / -1;
+} */
+
+/* .layout {
+  display: grid;
+  width: 90%;
+  max-width: 1000px;
+  background: #111999;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "hero hero";
+}
+
+.header {
+  grid-area: header;
+  height: 45px;
+}
+
+.hero {
+  grid-area: hero;
+  background: red;
+} */
+
+.msg {
+  background: pink;
+}
+
+section {
+  background: red;
+}
+
+body {
+  background: #445;
+}

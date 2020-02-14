@@ -1,0 +1,44 @@
+.btn {
+  background: var(--btn-gray);
+  color: white;
+  padding: 5px 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.btn.btn-red {
+  background: #ff4842;
+}
+
+.btn.btn-green {
+  background: #7dcd40;
+}
+
+.btn.btn-light {
+  border: 1px solid #7dcd40;
+  color: #7dcd40;
+  padding: 5px 20px;
+  background: none;
+  box-shadow: none;
+}
+
+.btn.btn-light.btn-light-blue {
+  border: 1px solid #056fff;
+  color: #056fff;
+}
+
+.btn:active {
+  transform: scale(0.7);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-white-menu);
+}
+.style {
+  list-style: none;
+}

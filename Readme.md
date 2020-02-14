@@ -384,6 +384,25 @@ calc(315*100/560)*1%
 }
 ```
 
+# Grid Layout
+
+```text
+Css Grid Layout. (Mis apuntes de la clase).
+En css podemos interpretar cualquier cosa como una caja y así darle estilos.
+
+-Grid Container: Nos permite poner las especificaciones ahí, facilitándonoslo de esa manera el trabajo.
+
+-Grid Item: Es donde se guarda el contenido dinámico que se haga dentro de la pagina. Este es hijo directo del Grid Container.
+
+-Grid line: son las lineas divisoras, tanto horizontales como verticales.
+
+-Grid Track: Son las filas y columnas.
+
+-Grid Cell: Es el espacio donde dos lineas horizontales y dos lineas verticales se juntan.
+
+-Grid Area: Es la suma de n grid cells.
+```
+
 # Multiple ssh key
 
 ```bash

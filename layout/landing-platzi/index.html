@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-container">
+        <figure class="badge">
+          <img src="badge.png" alt="" />
+        </figure>
+        <h1 class="titulo">Curso de React</h1>
+        <div class="description">
+          <p>
+            React es una de las librerias mas usadas de hoy en dia. con este
+            curso te ayudara a explotar todas las capacidades de esta libreria.
+          </p>
+        </div>
+        <div class="form">
+          <p>Registrate a Platzi</p>
+          <input type="text" placeholder="Nombre" />
+          <input type="email" placeholder="Correo Electronico" />
+          <button type="submit">Comienza Ahora</button>
+        </div>
+        <div class="countdown">
+          <p>Lanzamiento en :</p>
+          <p>
+            <span class="countdown-days"></span>
+            <span class="countdown-hours"></span>
+            <span class="countdown-minutes"></span>
+            <span class="countdown-seconds"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      // constants pointing to each span element inside the countdown
+      const $countdownDays = document.querySelector(".countdown-days");
+      const $countdownHours = document.querySelector(".countdown-hours");
+      const $countdownMinutes = document.querySelector(".countdown-minutes");
+      const $countdownSeconds = document.querySelector(".countdown-seconds");
+
+      // constant with the objetive date
+      const countdownDate = new Date("dec 31, 2019 12:00:00").getTime();
+      console.log("countdownDate:", countdownDate);
+      // interval that will repeat every second
+      let x = setInterval(() => {
+        // constant that get the actual date every second
+        const now = new Date().getTime();
+
+        // the differnce between the objetive date and the current date
+        const difference = countdownDate - now;
+
+        //  conversion between the different of dates to days, hours, minutes and seconds
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // update the text of the countdown
+        $countdownDays.innerHTML = `${days}d`;
+        $countdownHours.innerHTML = `${hours}h`;
+        $countdownMinutes.innerHTML = `${minutes}mn`;
+        $countdownSeconds.innerHTML = `${seconds}s`;
+
+        if (difference < 0) {
+          // clear the invertal when the countdown mark 0
+          clearInterval(x);
+          // if the countdown mark zero write some text
+          // const $countdown = document.querySelector('.countdown').innerHTML =  "<p>Some text<P>"
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
