@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./platziweb.png");
+  background-size: 100%;
+  height: 200vh;
+  margin: 0;
+}
+/* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Arial;
+  background: #f1f1f1;
+} */
+.notificacion {
+  color: white;
+  width: 50px;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.notificacion:before {
+  content: "\f0f3";
+  font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free";
+  display: block;
+}
+.notificacion.notify:before {
+  animation-name: bell;
+  animation-duration: 1s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: ease-out;
+  transform-origin: center top;
+}
+@keyframes bell {
+  0% {
+    transform: rotate(35deg);
+  }
+  12.5% {
+    transform: rotate(-30deg);
+  }
+
+  25% {
+    transform: rotate(25deg);
+  }
+
+  37.5% {
+    transition: rotate(-20deg);
+  }
+
+  50% {
+    transition: rotate(15deg);
+  }
+
+  62.5% {
+    transition: rotate(-10deg);
+  }
+
+  75% {
+    transition: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.notificacion::after {
+  content: attr(data-count);
+  font-size: 9px;
+  font-weight: bold;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  min-width: 14px;
+  border-radius: 50%;
+  background: #ff4600;
+  position: absolute;
+  top: 14px;
+  left: 27px;
+  font-family: Arial;
+  opacity: 0;
+  transition: scale(0.5);
+  transition: 0.3s;
+  will-change: opacity, transform;
+}
+
+.notificacion.show-count:after {
+  opacity: 1;
+  transition: scale(1);
+}
+
+.btn {
+  text-align: center;
+  background: lightgray;
+  padding: 0.6em 0.8em 0.8em;
+  border: none;
+  color: white;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0 -0.2em rgba(0, 0, 0, 0.2);
+  outline: 0;
+  transition: 0.2s;
+
+  /* will-change: transform; */
+}
+
+.btn.primary {
+  background: #7dc800;
+}
+
+.btn.btn-warning {
+  background: #ff463b;
+}
+
+.btn:active {
+  transform: scale(0.8);
+}
+
+.header {
+  background: #1d3644;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 200px;
+}

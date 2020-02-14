@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  /* height: 100vh; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Arial;
+  background: #f1f1f1;
+}
+
+.overley {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1.2s ease-in;
+}
+.overley.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  width: 500px;
+  background: #f1f1f1;
+  padding: 2em;
+  border-radius: 0.5em;
+  text-align: center;
+  /* animation: name time estado */
+  animation: animationIn 1s forwards;
+}
+.btn {
+  text-align: center;
+  background: lightgray;
+  padding: 0.6em 0.8em 0.8em;
+  border: none;
+  color: white;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0 -0.2em rgba(0, 0, 0, 0.2);
+  outline: 0;
+  transition: 0.2s;
+
+  /* will-change: transform; */
+}
+
+.btn.primary {
+  background: #7dc800;
+}
+
+.btn.btn-warning {
+  background: #ff463b;
+}
+
+.btn:active {
+  transform: scale(0.8);
+}
+
+@keyframes animationIn {
+  0% {
+    transform: translateY(-3000px);
+  }
+
+  60% {
+    transform: translateY(25px);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes animationOut {
+  0% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+
+  75% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(-3000px);
+  }
+}

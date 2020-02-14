@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animaciones de entrada y salida</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="platziweb.png" />
+    <div class="overley active" id="overlay">
+      <div class="modal" id="modal">
+        <h1>Modal</h1>
+        <p>Estas Apunto de crear una venta de modal super cool</p>
+        <p>Te gusto??</p>
+        <div class="modal-buttons">
+          <button class="btn primary" id="hide-modal">Si esta chido?</button>
+          <button class="btn btn-warning">No :(</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const $hideButton = document.getElementById("hide-modal");
+    const $modal = document.getElementById("modal");
+    const $overlay = document.getElementById("overlay");
+
+    $hideButton.addEventListener("click", event => {
+      console.log(event);
+      $modal.style.animation = "animationOut 1s forwards";
+      $overlay.classList.toggle("active");
+    });
+  </script>
+</html>

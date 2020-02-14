@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Arial;
+  background: #f1f1f1;
+}
+
+.like {
+  background-image: url("img/heart.png");
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-size: 1450px 50px;
+  /* background: red; */
+  /* background-position: -2800px 0; */
+}
+
+.like.is-like {
+  animation-name: like;
+  animation-duration: 0.8s;
+  animation-timing-function: steps(28);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes like {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: right;
+  }
+}

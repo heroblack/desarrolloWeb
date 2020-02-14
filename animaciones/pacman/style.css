@@ -1,0 +1,249 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.pelota {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: red;
+  position: absolute;
+  /* transition-property: width, height;
+  transition-duration: 0.6s; */
+  /* transition-delay: 0.3s; */
+  /* transition-timing-function: ease; */
+  transition: 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canasta {
+  height: 100px;
+  width: 100%;
+  border: 1px solid red;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.pelota.a {
+  background: red;
+  left: 0;
+}
+
+.pelota.b {
+  background: blue;
+  right: 0;
+}
+
+.canasta:hover .pelota.a {
+  left: calc(50% - 100px);
+}
+
+.canasta:hover .pelota.b {
+  right: calc(50% - 100px);
+}
+
+.path {
+  display: flex;
+  width: 90%;
+  height: 100px;
+  background: #333;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.path::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-top: 9px dotted white;
+  width: 96%;
+}
+
+.pacman {
+  position: absolute;
+  z-index: 99;
+  top: 20%;
+  left: -20%;
+  animation: moveforward 7s linear infinite;
+  animation-delay: 0.8s;
+}
+
+.pacman::before,
+.pacman::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: 30px solid yellow;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  animation: mouthTop 0.6s ease infinite;
+}
+
+.pacman::after {
+  /* margin-left: 65px; */
+
+  border-color: yellow;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  animation: mouthBottom 0.6s ease infinite;
+}
+
+.ghost {
+  position: absolute;
+  z-index: 99;
+  top: 15%;
+  left: 20%;
+  height: 56px;
+  width: 56px;
+  background: red;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  animation: moveforward 7s linear infinite;
+}
+
+.ghost::before,
+.ghost::after {
+  content: "";
+  position: absolute;
+  background: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  top: 15px;
+  left: 4px;
+}
+.ghost::after {
+  left: 28px;
+}
+.eyes::before,
+.eyes::after {
+  content: "";
+  position: absolute;
+  background: blue;
+  height: 9px;
+  width: 9px;
+  border-radius: 4px;
+  top: 21px;
+  left: 15px;
+}
+
+.eyes::after {
+  left: 40px;
+  z-index: 100;
+}
+
+.skirt {
+  /* .skirt::before,
+.skirt::after { */
+  /* content: ""; */
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  background: red;
+  top: 56px;
+  left: 0;
+  animation-name: feet;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(1);
+  animation-iteration-count: infinite;
+  /* border: 10px solid #333;
+  bottom: -10px;
+  border-top-color: transparent; */
+  /* animation: movePieGhost 2s linear infinite; */
+  /* border-bottom-color: transparent; */
+  /* border-right-color: transparent; */
+  /* border-left-color: transparent; */
+  /* 
+   */
+
+  /* box-shadow: 4px 0 red, 8px 0 red, 12px 0 red, 4px 4px red, 8px 4px red,
+    20px 0 red, 24px 0 red, 28px 0 red, 32px 0 red, 24px 4px red, 28px 4px red,
+    40px 0 red, 44px 0 red, 48px 0 red, 52px 0 red, 44px 4px red, 48px 4px red; */
+
+  /* box-shadow: 0 4px red, 4px 0 red, 12px 0 red, 16px 0 red, 20px 0 red,
+    16px 4px red, 20px 4px red, 32px 0 red, 36px 0 red, 40px 0 red, 32px 4px red,
+    36px 4px red, 48px 0 red, 52px 0 red, 52px 4px red;
+*/
+
+  /* box-shadow: 4px 0 red, 8px 0 red, 12px 0 red, 4px 4px red, 8px 4px red,
+    20px 0 red, 24px 0 red, 28px 0 red, 32px 0 red, 24px 4px red, 28px 4px red,
+    40px 0 red, 44px 0 red, 48px 0 red, 52px 0 red, 44px 4px red, 48px 4px red; */
+}
+
+/* .skirt::before {
+  content: "";
+  left: 10px;
+}
+
+.skirt::after {
+  content: "";
+  left: 30px;
+} */
+@keyframes mouthTop {
+  50% {
+    transform: rotate(44deg);
+  }
+}
+
+@keyframes mouthBottom {
+  50% {
+    transform: rotate(-44deg);
+  }
+}
+
+@keyframes moveforward {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes movePieGhost {
+  0% {
+    left: 10px;
+  }
+  100% {
+    left: 30px;
+  }
+}
+
+@keyframes movePieGhost2 {
+  0% {
+    left: 30px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes feet {
+  0% {
+    box-shadow: 4px 0 red, 8px 0 red, 12px 0 red, 4px 4px red, 8px 4px red,
+      20px 0 red, 24px 0 red, 28px 0 red, 32px 0 red, 24px 4px red, 28px 4px red,
+      40px 0 red, 44px 0 red, 48px 0 red, 52px 0 red, 44px 4px red, 48px 4px red;
+  }
+  50% {
+    box-shadow: 0 4px red, 4px 0 red, 12px 0 red, 16px 0 red, 20px 0 red,
+      16px 4px red, 20px 4px red, 32px 0 red, 36px 0 red, 40px 0 red,
+      32px 4px red, 36px 4px red, 48px 0 red, 52px 0 red, 52px 4px red;
+  }
+  100% {
+    box-shadow: 4px 0 red, 8px 0 red, 12px 0 red, 4px 4px red, 8px 4px red,
+      20px 0 red, 24px 0 red, 28px 0 red, 32px 0 red, 24px 4px red, 28px 4px red,
+      40px 0 red, 44px 0 red, 48px 0 red, 52px 0 red, 44px 4px red, 48px 4px red;
+  }
+}

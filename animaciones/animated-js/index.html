@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pelota" id="pelota"></div>
+    </div>
+  </body>
+  <script>
+    const $pelota = document.getElementById("pelota");
+    $pelota.animate(
+      [
+        {
+          transform: "translateX(0)"
+        },
+        {
+          transform: "translateX(500px)"
+        }
+      ],
+      {
+        // duration:  =>animation-duration
+        // delay:     =>animation-delay
+        // direction: =>animation-direction
+        // easing:    =>animation-timing-function
+        // iterations:=>animation-iteration-count
+        // fill:      =>animation-fill-mode
+        // iterationStart 0 1
+        //
+        duration: 1000,
+        delay: 1000,
+        direction: "normal",
+        easing: "linear",
+        iterations: Infinity,
+        fill: "forwards",
+        iterationStart: 0.5
+        // endDelay: 5000
+      }
+    );
+  </script>
+</html>

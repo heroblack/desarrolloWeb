@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Arial;
+  background: #f1f1f1;
+}
+
+.container {
+  width: 600px;
+  border: 1px solid red;
+}
+
+.pelota {
+  width: 100px;
+  height: 100px;
+  background: #213;
+  border-radius: 50%;
+}
